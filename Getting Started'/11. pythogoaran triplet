@@ -1,0 +1,172 @@
+mport java.util.*;
+  
+  public class Main {
+  
+  	  public static void main(String[] args) {
+  	  	//   Write your code here
+			Scanner scn = new Scanner(System.in);
+			int a = scn.nextInt();
+			int b = scn.nextInt();
+			int c = scn.nextInt();
+			 
+			 if(a*a== b*b + c*c){
+				 System.out.println("true");
+			 }
+			 else if (b*b== a*a+c*c){
+				 System.out.println("true");
+
+			 }
+			 else if(c*c== b*b + a*a){
+				 System.out.println("true");
+
+			 } 
+			 else {
+				 System.out.println("false");
+			 }
+
+
+
+
+
+  	  }
+  }
+
+
+ public class Main {
+  
+  	  public static void main(String[] args) {
+  	  	//   Write your code here
+			Scanner scn = new Scanner(System.in);
+			int a = scn.nextInt();
+			int b = scn.nextInt();
+			int c = scn.nextInt();
+
+			 if (a>b && a>c){
+				 if(a*a == b*b + c*c){
+					 System.out.println("true");
+
+				 }
+				 else {
+					 System.out.println("false");
+				 }
+			 }
+
+			 else if(b>a && b>c){
+				 if (b*b==a*a + c*c){
+					 System.out.println("true");
+
+				 }
+				 else{
+					 System.out.println("false");
+				 }
+			 }
+			 else{
+				 if(c*c==b*b + a*a){
+					 System.out.println("true");
+				 }
+				 else{
+					 System.out.println("false");
+				 }
+			 }
+
+
+
+
+
+  	  }
+  }
+
+
+
+
+
+
+import java.util.*;
+  
+  public class Main {
+  
+  	  public static void main(String[] args) {
+  	  	//   Write your code here
+			Scanner scn = new Scanner(System.in); 
+			int a = scn.nextInt();
+			int b = scn.nextInt();
+			int c = scn.nextInt();
+
+			int max = a;
+			if (b>max){
+				max=b;}
+
+			else if(c>max){
+				max= c;
+			}
+			if (max==a){
+				boolean flag = (a*a==b*b+c*c);
+				System.out.println(flag);
+
+
+			}
+			else if (max ==b){
+				boolean flag =(b*b==a*a+c*c);
+				System.out.println(flag);
+
+			}
+			else{
+				boolean flag =(c*c==a*a + b*b);
+				System.out.println(flag);
+
+			}
+
+
+
+				}
+			}
+
+
+
+
+
+            import java.util.*;
+  
+  public class Main {
+  
+  	  public static void main(String[] args) {
+  	  	//   Write your code here
+			Scanner scn = new Scanner(System.in); 
+			int a = scn.nextInt();
+			int b = scn.nextInt();
+			int c = scn.nextInt();
+
+			if (a>b && a>c){
+				if (a*a== b*b + c*c){
+					System.out.println("true");
+					}
+
+					else{
+						System.out.println("false");
+
+					}
+	              }
+		else if(b>c && b>a){
+				if (b*b == c*c + a*a ){
+		System.out.println("true");
+						  }
+				   else {
+			System.out.println("false");
+
+	   			  }
+		}
+            else if (c>a && c>b){
+		   if(c*c== a*a + b*b ){
+			   System.out.println("true");
+		   }
+			   else {
+				   System.out.println("false");
+			   }
+		   }
+		   else{
+			   System.out.println("all are same ");
+		   }
+	   
+
+  	  }
+  }
