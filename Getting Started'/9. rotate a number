@@ -1,0 +1,83 @@
+import java.util.*;
+   
+   public class Main{
+   
+   public static void main(String[] args) {
+     // write your code here  s
+     Scanner scn = new Scanner (System.in);
+       int n = scn.nextInt();
+       int k = scn.nextInt();
+       int temp =  n ;
+       int count =0;
+
+       while (temp!=0){
+         temp = temp/10;
+         count++ ;
+
+       }
+       
+
+       k = k % count;
+
+       if (k<0){
+         k= k + count;
+       }
+      //  k=k %count;
+
+       int div = (int)Math.pow(10,k);
+       int initial1 = n%div;
+       int initial2 = n/div;
+
+       int initial3= (int)Math.pow(10, count-k);
+       int ans =  (initial1* initial3)+initial2 ;
+       System.out.println(ans);
+       
+
+
+    }
+   }
+
+
+
+
+   import java.util.*;
+   
+   public class Main{
+   
+   public static void main(String[] args) {
+     // write your code here  
+     Scanner scn = new Scanner (System.in);
+     int n = scn.nextInt();
+     int k = scn.nextInt();
+     int temp = n;
+     int count =0;
+     while (temp!=0){
+       temp = temp/10;
+       count++;
+     }
+        
+
+      k = k % count;
+      if (k<0){
+      k = k +count;
+       }
+
+
+       int splithelper = (int)Math.pow(10,k);
+       int p1 = n/splithelper;
+       int p2 = n%splithelper;
+       
+
+
+       int mergehelper= (int)Math.pow(10,count-k);
+        int ans = (p2*mergehelper)+ p1;
+        System.out.println(ans);
+       
+
+
+     
+
+
+     
+   }
+   }
