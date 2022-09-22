@@ -1,0 +1,79 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner (System.in);
+        int n = scn.nextInt();
+        int m = scn.nextInt();
+        int mat[][]= new int[n][m];
+        for(int r=0; r<n; r++){
+            for (int c=0;c<m;c++){
+                mat[r][c]=scn.nextInt();
+
+
+             }
+             
+        }
+        spiraldisplay(mat);
+    }
+     public static void spiraldisplay(int mat[][]){
+         int rmin = 0;
+         int rmax = mat.length;
+         int cmin=0;
+         int cmax = mat[0].length;
+         int count =0;
+         int tno = mat.length* mat[0].length; 
+        while(count<tno){
+
+        for(int r =rmin,c=cmin; r<rmax && count<tno;r++){
+             System.out.println(mat[r][c]);
+             count++;
+         }
+         for(int r=rmax-1,c=cmin+1; c<cmax && count<tno ;c++){
+             System.out.println(mat[r][c]);
+             count++;
+         }
+         for(int r=rmax-2,c=cmax-1; r>=rmin && count<tno; r-- ){
+             System.out.println(mat[r][c]);
+             count++;
+        }
+        for (int r= rmin, c= cmax-2; c>cmin &&count<tno ;c--){
+            System.out.println(mat[r][c]);
+            count++;
+
+        }
+        rmin++;
+        cmin++;
+        rmax--;
+        cmax--;
+     }
+
+        
+
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     }
+
+
+}
