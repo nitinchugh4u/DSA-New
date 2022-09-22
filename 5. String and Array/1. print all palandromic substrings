@@ -1,0 +1,64 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+	public static void findsubstring(String str){
+		//write your code here	
+		for (int sidx =0; sidx<str.length();sidx++){
+			for (int eidx =sidx+1;eidx<=str.length();eidx++){
+				String ss = str.substring(sidx,eidx);
+				
+				boolean value =checkpalindrome(ss);
+				if(value){
+					System.out.println(ss);
+				}
+
+				
+
+			}
+
+			
+
+
+
+		}
+
+
+
+		
+	}
+	public static  boolean checkpalindrome(String ss){
+		int left = 0;
+		int right = ss.length()-1;
+		while(left<=right){
+
+
+			if(ss.charAt(left)!= ss.charAt(right)){
+				return false;
+
+			}
+			
+			// ss(left) == ss(right);
+
+
+			left++;
+			right--;
+
+
+
+
+		}
+		return true;
+
+
+
+	}
+
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		String str = scn.next();
+		findsubstring(str);
+	}
+
+}
