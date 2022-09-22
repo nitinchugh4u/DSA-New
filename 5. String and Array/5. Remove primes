@@ -1,0 +1,47 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+	public static void checkprime(ArrayList<Integer> list){
+		// write your code here
+		
+		for (int i =list.size()-1; i>=0; i--){
+			boolean prime =true;
+			int num = list.get(i);
+			
+			for (int fac =2; fac*fac<=num;fac++){
+				if (num%fac==0){
+					prime =false;
+					break;
+
+				}
+
+
+
+			}
+			if (prime){
+				list.remove(i);
+			}
+
+
+
+
+		}
+		System.out.println(list);
+
+
+		
+	}
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		int n = scn.nextInt();
+		ArrayList<Integer> list = new ArrayList<>();
+		for(int i = 0 ; i < n; i++){
+			list.add(scn.nextInt());
+		}
+		checkprime(list);
+		// System.out.println(list);
+	}
+
+}
