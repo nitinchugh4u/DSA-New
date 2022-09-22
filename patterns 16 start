@@ -1,0 +1,289 @@
+// PATTERN 16
+
+
+
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+    int n = scn.nextInt();
+
+    int nstr =1;
+    int nspace = 2*n-3;
+    for (int r =1 ; r<=n ; r++){
+        int val =1;
+
+        for (int i =1 ; i<=nstr; i++){
+            
+       System.out.print(val +"\t");
+       val ++;
+       }
+
+       for (int i =1; i<=nspace; i++){
+           System.out.print("\t");
+      }
+      if (r ==n){
+          nstr--;
+          val--;
+      }
+      for(int i =1 ; i <=nstr; i++ ){
+          val--;
+          
+          
+          System.out.print(val +"\t");
+
+      }
+      nstr++;
+      nspace = nspace-2;
+      System.out.println();
+
+
+      
+
+
+
+
+    }
+
+
+
+
+     // write ur code here
+
+
+ }
+}
+
+
+
+// PATTERN 18
+
+
+
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+    int n= scn.nextInt();
+    int nstar= n ;
+    int nspace= 0;
+
+    for (int r=1 ; r<=n ; r++){
+        for (int c=1 ; c<=nspace;  c++){
+            System.out.print("\t");
+
+
+        }
+        
+        for(int c=1; c<=nstar; c++ ){
+                if ( r>1 && r<=n/2){
+                    if(c==1 ||c==nstar){
+                        System.out.print("*\t");
+
+                    }
+                    else{
+                        System.out.print("\t");
+                    }
+                }
+                
+                else{
+                
+
+            System.out.print("*\t");
+                }                
+        }
+                
+        
+        
+        if(r<=n / 2){
+            
+        nspace = nspace+1;
+        nstar= nstar-2;
+        }
+        else {
+            nspace = nspace-1;
+            nstar = nstar+2;
+
+        }
+        System.out.println();
+
+
+    
+
+    
+
+
+
+
+    }
+}
+
+
+
+     
+     
+
+ }
+
+
+
+//  PATTERN 19
+
+
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) {
+    Scanner scn = new Scanner(System.in);
+      int n= scn.nextInt();
+      
+
+      for(int r=1; r<=n; r++){
+          for(int c=1 ; c<=n; c++){
+              if (r==1){
+              if(c<=(n/2)+1  || c==n ){
+                  System.out.print("*\t");
+              }
+              else {
+                  System.out.print("\t");
+              }
+        }
+              
+              else if(r >1 && r<=n/2){
+                  if (c==(n/2)+1 || c==n){
+                      System.out.print("*\t");
+                  }
+                  else{
+
+                      System.out.print("\t");
+                  }
+              }
+
+              else if(r==(n/2)+1){
+
+                  System.out.print("*\t");
+
+              }
+              
+              else if(r> (n/2)+1  && r<n){
+                  if(c==1 || c== (n/2)+1){
+
+                      System.out.print("*\t");
+                  }
+                  else{
+                      System.out.print("\t");
+                  }
+
+              } 
+
+              else if(r==n){
+                  if (c==1 || c>=(n/2)+1){
+                      System.out.print("*\t");
+                  }
+                  else {
+                      System.out.print("\t");
+                  }
+
+
+              }
+
+
+
+              
+
+
+
+
+              }
+
+
+          
+          
+
+
+
+
+
+
+
+
+
+          System.out.println();
+          }
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      }
+
+
+    
+     
+
+ }
+
+
+
+
+//  PATTERN  20
+
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+
+         for(int r=1 ; r<=n ; r++){
+          for(int c=1; c<=n; c++){
+              if (c==1  || c==n){
+                  System.out.print("*\t");
+              }
+               else if ( r>n/2 && (r==c || r+c == n+1) ){
+                //   if (r > n/2){
+                  System.out.print("*\t");
+                //   }
+                //   else {
+                    //   System.out.print("\t");
+                //   }
+               }
+              
+                    else {
+                  System.out.print("\t");
+              }
+
+
+
+             }
+
+
+
+
+        System.out.println();
+       }
+        
+
+    }
+}
+
+
+
