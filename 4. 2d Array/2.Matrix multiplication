@@ -1,0 +1,73 @@
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) throws Exception {
+    Scanner scn = new Scanner(System.in);
+    int n1 = scn.nextInt();
+    int m1 =  scn.nextInt();
+    int  mat1[][] = new int[n1][m1];
+    for(int r =0 ; r<n1; r++){
+        for (int c=0; c<m1;c++){
+            mat1[r][c]= scn.nextInt();
+        }
+    }
+    int n2 = scn.nextInt();
+    int m2 = scn.nextInt();
+    int mat2[][] = new int [n2][m2];
+    for (int r=0; r<n2;r++){
+        for (int c=0; c<m2;c++){
+            mat2[r][c] =scn.nextInt();
+        }
+
+    }
+     int  res[][] = matrix_multiplication(mat1,mat2);
+     if(res== null){
+         System.out.print("Invalid input");
+     }
+     else{
+         display(res);
+
+     }
+
+}
+    public static int [][] matrix_multiplication(int mat1[][],int mat2[][]){
+     
+     int r1 = mat1.length, c1 = mat1[0].length;
+     int r2 = mat2.length, c2 = mat2[0].length;
+    //  if multiplication possible
+     if (c1==r2){
+         int res[][] = new int[r1][c2];
+         
+         for(int r=0; r<res.length; r++){
+             for(int c=0; c<res[0].length;c++){
+                 for(int k =0; k<c1;k++){
+                     res[r][c] += mat1[r][k]*mat2[k][c];
+                }
+            
+            }      
+        }
+
+        return res;
+    }
+    //  if  multiplication not  poss.
+     else{
+        return null;
+
+    }
+} 
+public static void  display(int res[][]){
+ for(int r =0; r<res.length;r++){
+     for (int c=0; c<res[0].length;c++){
+         System.out.print(res[r][c]+" ");
+
+
+    }
+     System.out.println();
+ }
+
+
+}
+
+}
