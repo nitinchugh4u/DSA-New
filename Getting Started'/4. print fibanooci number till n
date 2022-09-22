@@ -1,0 +1,126 @@
+import java.util.*;
+  
+  public class Main{
+  
+  public static void main(String[] args) {
+      // write your code here
+      Scanner scn  = new Scanner(System.in);
+      int n= scn.nextInt();
+       int first =0;
+       int second = 1;
+       for(int i=1; i<=1; i++){
+         System.out.println(first);
+         System.out.println(second);
+         }
+      
+
+      for(int i =3 ; i<=n; i++){
+
+
+        int third = first + second;
+        System.out.println(third);
+        
+        first = second ;
+        second = third;
+
+     }
+
+       
+        }
+  }   
+
+
+
+import java.util.*;
+  
+  public class Main{
+  
+  public static void main(String[] args) {
+      // write your code here
+      Scanner scn  = new Scanner(System.in);
+      int n= scn.nextInt();
+       int first =0;
+       int second = 1;
+       for (int i = 1; i<=n; i++){
+         int third = first +second;
+         System.out.println(first);
+         first= second;
+         second = third;
+       }
+      
+
+
+
+
+
+      }
+  }
+
+
+
+  import java.util.*;
+  
+  public class Main{
+  
+  public static void main(String[] args) {
+      // write your code here
+      Scanner scn = new Scanner (System.in);
+      int n = scn.nextInt(); 
+       int a = 0;
+       int b = 1;
+       System.out.println(a);
+       System.out.println(b);
+       for(int i =3 ; i<=n; i++){
+         int c = a+b;
+         System.out.println(c);
+         a = b ;
+         b= c;
+
+
+       }
+
+
+
+
+   }
+  }
+
+
+
+
+mport java.util.*;
+  
+  public class Main{
+  
+  public static void main(String[] args) {
+      // write your code here
+      Scanner scn = new Scanner(System.in);
+       
+       int second = 1;
+       int first =0;
+        int n = scn.nextInt();
+
+      for (int i =1 ; i<=1; i++){
+        
+       
+        System.out.println(first);
+      }
+        System.out.println(second);
+        for (int i =3; i<=n; i++ ){
+          int third = first +second;
+          System.out.println(third);
+          
+          first= second;
+          second = third;
+
+
+
+        }
+
+
+
+      
+
+
+   }
+  }
