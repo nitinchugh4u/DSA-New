@@ -1,0 +1,73 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner (System.in);
+        int n = scn.nextInt();
+        int mat[][]= new int[n][n];
+        for (int r =0;r<n;r++){
+            for(int  c=0; c<n;c++){
+                mat[r][c]= scn.nextInt();
+            }
+        }
+        transpose(mat);
+        reversecolumns(mat);
+        display(mat);
+
+
+    }
+
+    public static void transpose(int mat[][]){
+        for(int r =0;r<mat.length;r++){
+            for(int c=r;c<mat[0].length;c++){
+                int temp = mat[r][c];
+                  mat[r][c] = mat[c][r];
+                  mat[c][r] = temp;
+
+            }
+
+        }
+
+    }
+    public static void reversecolumns(int mat[][]){
+        for(int r=0;r<mat.length;r++){
+            int left =0;
+            int right = mat.length-1;
+            while(left<=right){
+                int temp = mat[r][left];
+                mat[r][left]= mat[r][right];
+                mat[r][right]= temp;
+
+
+                left++;
+                right--;
+
+
+
+
+
+
+            }
+
+
+        }
+
+
+
+
+
+    }
+
+    public static void display(int[][] arr){
+        for(int i = 0; i < arr.length; i++){
+            for(int j = 0; j < arr[0].length; j++){
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+
+}
