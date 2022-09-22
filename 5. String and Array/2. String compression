@@ -1,0 +1,176 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+	public static String compression1(String str){
+		// write your code here
+		// String ans = "";
+		// StringBuilder sb = new StringBuilder();
+		// for(int idx=0; idx<str.length()-1;idx++){
+		// 	if (str.charAt(idx) == str.charAt(idx+1)){
+
+		// 	}
+		// 	else {
+		// 		sb.append(str.charAt(idx));
+		// 	}
+
+
+		// }
+		// sb =  sb.append(str.charAt(str.length()-1));
+		// return sb.toString();
+
+
+		StringBuilder sb = new StringBuilder(str);
+		// sb.reverse();
+		
+		for (int idx =sb.length()-1; idx>0; idx--){
+			if(sb.charAt(idx)==sb.charAt(idx-1)){
+				sb.deleteCharAt(idx);
+			}
+			else{
+
+			}
+
+
+
+		}
+		return sb.toString();
+
+		
+	}
+
+	public static String compression2(String str){
+	StringBuilder sb = new StringBuilder(str);
+		// sb.reverse();
+		int count =1;
+		
+		for (int idx =sb.length()-1; idx>0; idx--){
+			
+			
+
+			if(sb.charAt(idx)==sb.charAt(idx-1)){
+				sb.deleteCharAt(idx);
+				count++;
+				if(idx==1){
+					sb.insert(1,count);
+				}
+				
+			}
+			else{if (count>1){
+				sb.insert(idx+1,count);
+				count =1;
+			    }
+
+			}
+
+
+
+		}
+		
+		return sb.toString();
+		
+
+		
+	}
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		String str = scn.next();
+		System.out.println(compression1(str));
+		System.out.println(compression2(str));
+	}
+
+}
+
+
+
+
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+	public static String compression1(String str){
+		String ans = "" ;
+		for (int idx= 0; idx<str.length()-1; idx++){
+			
+             if(str.charAt(idx) == str.charAt(idx+1)){
+			 
+				 
+			
+			}
+			
+			else{
+				ans = ans + str.charAt(idx);
+
+			}
+			if(idx ==str.length()-2){
+				 ans = ans + str.charAt(idx+1);
+					
+		    }
+			
+
+
+
+
+
+		}
+		
+		
+
+		return ans;
+	}
+
+	public static String compression2(String str){
+		// write your code herefor (int idx= 0; idx<str.length()-1; idx++){
+			String ans = "" ;
+			int count =1;
+			for (int idx= 0; idx<str.length()-1; idx++){
+             if(str.charAt(idx) == str.charAt(idx+1)){
+				 count ++;
+				 
+			 
+				 
+			
+			}
+			
+			else{
+				ans = ans + str.charAt(idx) ;
+				if(count>1){
+					ans = ans+count;
+				}
+			
+				count =1;
+
+			}
+			if(idx ==str.length()-2){
+				
+				 ans = ans + str.charAt(idx+1);
+				 if(count>1){
+					 ans = ans +count;
+				 }
+				 
+				//  count=1;
+					
+		    }
+			
+
+
+
+
+
+		}
+		
+		
+
+		return ans;
+	}
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		String str = scn.next();
+		System.out.println(compression1(str));
+		System.out.println(compression2(str));
+	}
+
+}
