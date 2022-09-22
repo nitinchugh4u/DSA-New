@@ -1,0 +1,83 @@
+import java.io.*;
+import java.util.*;
+
+public class Main{
+
+public static void main(String[] args) throws Exception {
+ Scanner scn = new Scanner (System.in);
+   int n1 = scn.nextInt();
+   int arr1[]= new int[n1];
+   for (int idx=0; idx<n1; idx++){
+        arr1[idx]= scn.nextInt();
+   }
+
+   int n2 = scn.nextInt();
+   int arr2[]=new int [n2];
+   for(int idx=0; idx<n2;idx++){
+       arr2[idx]=scn.nextInt();
+   }
+   int res[]= new int[n2];
+    int p1 = arr1.length-1;
+    int p2= arr2.length-1;
+    int p3= res.length-1;
+    int carry =0;
+
+    while(p3>=0){
+        int value=0;
+        int arr1v=(p1>=0) ? arr1[p1]:0;
+        // System.out.println(p2);
+        if(arr2[p2]+carry >=  arr1v){
+             value=arr2[p2]+carry-arr1v;
+             carry=0;
+
+        }
+
+        else{
+            value=arr2[p2]+10+carry-arr1v;
+            carry= -1;
+
+        }
+        res[p3]= value;
+
+        p1--;
+        p2--;
+        p3--;
+
+ }
+     int idx=0;
+     while(idx<res.length){
+         if(res[idx]==0){
+             idx++;
+         }
+         else{
+             break;
+         }
+
+
+     }
+     while(idx<res.length){
+           int rval=res[idx];
+           System.out.println(rval);
+           idx++;
+
+
+     }
+        
+
+
+        
+
+
+
+    
+
+
+
+
+
+
+
+}
+
+
+}
