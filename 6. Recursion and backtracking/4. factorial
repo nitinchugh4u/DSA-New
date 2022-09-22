@@ -1,0 +1,60 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+         int fac=factorial(n);
+        System.out.println(fac);
+
+    }
+
+    public static int factorial(int n){
+        if (n==0) return 1;
+
+       return n * factorial(n-1);
+        
+
+       
+        
+    }
+
+}
+
+
+
+
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+         int fac=factorial(n);
+        System.out.println(fac);
+
+    }
+
+    public static int factorial(int n){
+        if (n==0) return 1;
+
+       int value_return = factorial(n-1);
+       int val2 = n * value_return;
+       return val2;
+        
+
+       
+        
+    }
+
+}
+
+
+
+
+
+
