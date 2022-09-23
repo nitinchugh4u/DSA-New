@@ -1,0 +1,88 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+    Scanner scn = new Scanner(System.in);
+    String str = scn.nextLine();
+   ArrayList<String> subsequence = gss(str);
+   System.out.println(subsequence);
+
+
+    }
+
+    public static ArrayList<String> gss(String str) {
+        if(str.length()==0){
+            ArrayList<String> base = new ArrayList<>();
+            base.add("");
+            return base;
+        }
+        ArrayList<String> total = new ArrayList<>();
+    char ch= str.charAt(0);
+    String ros = str.substring(1);
+    ArrayList<String> res = gss(ros);
+    // ArrayList<String> total = new ArrayList<>();
+    for(String ress:res){
+        total.add(ress);
+    }
+    for(String ress:res){
+    total.add(ch+ress);
+    }
+    return total;
+
+    }
+
+}
+
+
+
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        Scanner scn  = new Scanner (System.in);
+        String str = scn.nextLine();
+         ArrayList<String>res = gss(str);
+         System.out.println(res);
+
+
+    }
+
+    public static ArrayList<String> gss(String str) {
+        // return new arrraylist with empty string
+        if (str.length()==0){
+            ArrayList<String> base = new ArrayList<>();
+            base.add("");
+            return base; 
+        }
+        
+        char ch = str.charAt(0);
+
+    
+
+        String ros = str.substring(1);
+        // return arraylist
+        ArrayList<String> rres =gss(ros);
+        ArrayList<String> ans = new ArrayList<>(); 
+
+        //   exc
+        for (String ss: rres){
+            ans.add(ss);
+        }
+        //  inc
+        for(String ss: rres){
+             ans.add(ch+ss);
+        }
+        return ans;
+
+        
+
+        
+    }
+
+}
+
