@@ -1,0 +1,51 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int chess[][] = new int[n][n];
+        String qsf = "";
+        printNQueens(chess,"",0);
+
+        
+    }
+
+    public static void printNQueens(int[][] chess, String qsf, int row) {
+        if(row==chess.length){
+            System.out.println(qsf+".");
+            return;
+        }
+        for(int columm=0; columm<chess.length;columm++){
+
+            if(isItsafePlacefortheQueen(chess,row,columm)==true){
+
+            chess[row][columm] =1;
+            printNQueens(chess,qsf+row+"-"+columm + ", ",row+1);
+            chess[row][columm] = 0;
+            }
+        }
+        
+    }
+    public static boolean isItsafePlacefortheQueen(int chess[][],int row, int columm){
+        for(int i= row-1,j=columm; i>=0 ;i--){
+            if(chess[i][j]==1){
+                return false;
+            }
+        }
+
+        for(int i =row-1,j=columm-1; i>=0 && j>=0;i--,j--){
+            if(chess[i][j]==1){
+                return false;
+            }
+        }
+        for(int i=row-1,j=columm+1; i>=0 && j<chess.length; i--,j++){
+            if(chess[i][j]==1){
+                return false;
+            }
+        }
+        return true;
+        }
+}
