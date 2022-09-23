@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn = new Scanner(System.in);
+        int n = scn.nextInt();
+        int arr[]= new int[n];
+        for (int idx =0; idx<arr.length; idx++){
+            arr[idx]= scn.nextInt();
+        }
+        int x = scn.nextInt();
+         int lastIndex = lastIndex(arr,arr.length-1,x);
+         System.out.println(lastIndex);
+    }
+
+    public static int lastIndex(int[] arr, int idx, int x){
+        if (idx == -1) return -1;
+        if (arr[idx] == x) return idx;
+       int index = lastIndex(arr,idx-1,x);
+       return index;
+
+
+
+        
+    }
+
+}
